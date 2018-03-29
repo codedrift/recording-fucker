@@ -5,7 +5,7 @@ const FUCKED_TEXT_NODES = ["p", "h1", "h2", "h3", "h4", "h5", "span", "strong"];
 function fuckUpBody() {
 	const bodyStyle = document.getElementsByTagName("body")[0].style;
 	bodyStyle.setProperty("transform", "rotate(0.001rad)");
-	bodyStyle.setProperty("filter", "hue-rotate(-0.1rad) grayscale(0.3)");
+	bodyStyle.setProperty("filter", "hue-rotate(-0.1rad) grayscale(0.2)");
 }
 
 function fuckUpImages() {
