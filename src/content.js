@@ -38,6 +38,18 @@ function fuckUpText() {
 	);
 }
 
-fuckUpText();
-fuckUpImages();
-fuckUpBody();
+function isHotjarInstalled() {
+	const scripts = Array.from(document.getElementsByTagName("script"));
+	for (script of scripts) {
+		if (script.textContent.indexOf("window.hj") >= 0) {
+			return true;
+		}
+	}
+	return false;
+}
+
+if (isHotjarInstalled()) {
+	fuckUpText();
+	fuckUpImages();
+	fuckUpBody();
+}
