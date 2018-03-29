@@ -1,7 +1,7 @@
 console.log("Hotjar", window.hj);
 
 function fuckUpBody() {
-	document.getElementsByTagName("body")[0].style.setProperty("transform", "rotate(0.002rad)");
+	document.getElementsByTagName("body")[0].style.setProperty("transform", "rotate(0.001rad)");
 }
 
 function fuckUpImages() {
