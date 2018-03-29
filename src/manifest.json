@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "recording-fucker",
+  "version": "1.0",
+  "permissions": [
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "recording-fucker",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+  },
+  "scripts": {
+    "build": "rm -rf build && mkdir build && cp -R src/* build"
+  }
+}
