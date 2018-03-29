@@ -3,7 +3,7 @@ console.log("Hotjar", window.hj);
 const FUCKED_TEXT_NODES = ["p", "h1", "h2", "h3", "h4", "h5", "span", "strong"];
 
 function fuckUpBody() {
-	document.getElementsByTagName("body")[0].style.setProperty("transform", "rotate(0.003rad)");
+	document.getElementsByTagName("body")[0].style.setProperty("transform", "rotate(0.001rad)");
 }
 
 function fuckUpImages() {
