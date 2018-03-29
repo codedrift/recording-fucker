@@ -1,5 +1,7 @@
 console.log("Hotjar", window.hj);
 
+const FUCKED_TEXT_NODES = ["p", "h1", "h2", "h3", "h4", "h5", "span", "strong"];
+
 function fuckUpBody() {
 	document.getElementsByTagName("body")[0].style.setProperty("transform", "rotate(0.003rad)");
 }
@@ -14,13 +16,17 @@ function fuckUpImages() {
 	});
 }
 
+function fuckUpTextContent(node) {
+	const text = node.innerText;
+	const position = Math.floor(Math.random() * text.length) + 1;
+	const fuckedUpText = text.substring(0, position - 1) + text.substring(position, text.length);
+	node.innerText = fuckedUpText;
+}
+
 function fuckUpText() {
-	Array.from(document.getElementsByTagName("p")).forEach(node => {
-		const text = node.innerText;
-		const position = Math.floor(Math.random() * text.length) + 1;
-		const fuckedUpText = text.substring(0, position - 1) + text.substring(position, text.length);
-		node.innerText = fuckedUpText;
-	});
+	FUCKED_TEXT_NODES.forEach(tag =>
+		Array.from(document.getElementsByTagName(tag)).forEach(fuckUpTextContent)
+	);
 }
 
 fuckUpText();
