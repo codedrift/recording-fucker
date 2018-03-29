@@ -31,7 +31,6 @@ function fuckUpText() {
 	FUCKED_TEXT_NODES.forEach(tag =>
 		Array.from(document.getElementsByTagName(tag)).forEach(node => {
 			if (index % 4 === 0) {
-				console.log(index);
 				fuckUpTextContent(node);
 			}
 			index++;
